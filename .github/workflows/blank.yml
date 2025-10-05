@@ -22,3 +22,17 @@ jobs:
         #executer une seule commande on utilisons le shell de runners
       - name: Run a one-line script
         run: echo "Hello, world."
+        # Executer un ensemble de commande en utilisons le shell de runner
+      - name: Run a multi-line dcript
+        run:
+         echo Add other actions to build,
+         echo test, and and deploy project.
+         # execute une seule commande on utilisons le shell de runners
+      - name: Run a one-line script
+        env:
+           SUPER_SECRET: ${{ secret.SupperSecret }}
+        run: echo "$SUPER_SECRET" | sed 's/./& /g'
+       
+       
+         
+       
