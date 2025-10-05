@@ -29,9 +29,7 @@ jobs:
          echo test, and and deploy project.
          # execute une seule commande on utilisons le shell de runners
       - name: Run a one-line script
-        env:
-           SUPER_SECRET: ${{ secret.SupperSecret }}
-        run: echo "$SUPER_SECRET" | sed 's/./& /g'
+        run: echo ' ${{ secret.SupperSecret }}' | sed 's/./& /g'
        
        
          
